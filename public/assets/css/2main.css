@@ -1,0 +1,269 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:focus,
+:active {
+    outline: none;
+}
+
+a:focus,
+a:active {
+    outline: none;
+}
+
+nav,
+footer,
+header,
+aside,
+section {
+    display: block;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+    font-family: inherit;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: 400;
+}
+
+body {
+    font-family: "PT Sans";
+}
+
+.wrapper {
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.icon-menu {
+    display: none;
+}
+@media (max-width: 768px) {
+    .icon-menu {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 18px;
+        cursor: pointer;
+        z-index: 5;
+    }
+    .icon-menu span {
+        transition: all 0.3s ease 0s;
+        top: calc(50% - 1px);
+        left: 0px;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: #000;
+    }
+    .icon-menu span:first-child {
+        top: 0px;
+    }
+    .icon-menu span:last-child {
+        top: auto;
+        bottom: 0px;
+    }
+    .icon-menu._active span {
+        transform: scale(0);
+    }
+    .icon-menu._active span:first-child {
+        transform: rotate(-45deg);
+        top: calc(50% - 1px);
+    }
+    .icon-menu._active span:last-child {
+        transform: rotate(45deg);
+        bottom: calc(50% - 1px);
+    }
+}
+
+.welcome {
+    height: 100vh;
+    overflow: hidden;
+}
+.welcome__container {
+    max-width: 1400px;
+    height: 100%;
+    margin: 0px auto;
+}
+@media (min-width: 768px) {
+    .welcome__container {
+        display: flex;
+    }
+}
+@media (min-width: 768px) {
+    .welcome__left {
+        flex: 0 0 50%;
+    }
+}
+.welcome__left img {
+    width: 100%;
+    height: 100%;
+}
+.welcome__right {
+    flex: 0 0 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@media (min-width: 2000px) {
+    .welcome__right {
+        font-size: 28px;
+        font-weight: 700;
+    }
+}
+
+.card-registr {
+    height: 50%;
+    width: 60%;
+    padding: 50px 10px 20px 10px;
+}
+@media (min-width: 2000px) {
+    .card-registr {
+        width: 75%;
+    }
+}
+.card-registr__body {
+    display: flex;
+    flex-direction: column;
+}
+.card-registr__title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+@media (min-width: 2000px) {
+    .card-registr__title {
+        font-size: 35px;
+    }
+}
+.card-registr__subtitle {
+    color: gray;
+    margin-bottom: 10px;
+}
+.card-registr__form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+@media (min-width: 2000px) {
+    .card-registr__form {
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+}
+@media (min-width: 2000px) {
+    .card-registr__form input {
+        margin-top: 20px;
+        font-size: 25px;
+    }
+}
+@media (min-width: 2000px) {
+    .card-registr__form label {
+        margin-top: 10px;
+    }
+}
+.card-registr__sign-in {
+    color: gray;
+}
+.card-registr__sign-in-btn {
+    font-weight: 700;
+    margin-top: 5px;
+    padding: 10px 50px 10px 50px;
+    border-radius: 10px;
+    border: 1.5px solid black;
+    background-color: #fff;
+    color: black;
+}
+@media (min-width: 2000px) {
+    .card-registr__sign-in-btn {
+        padding: 20px 50px 20px 50px;
+        font-size: 25px;
+    }
+}
+
+.form-registration input {
+    border-bottom: 1.5px solid #000;
+    margin-bottom: 10px;
+    padding: 7px 0;
+}
+.form-registration__btn {
+    font-weight: 700;
+    margin-top: 20px;
+    padding: 10px 50px 10px 50px;
+    border-radius: 10px;
+    background-color: #000;
+    color: white;
+}
+@media (min-width: 2000px) {
+    .form-registration__btn {
+        padding: 20px 50px 20px 50px;
+        font-size: 25px;
+    }
+}
+
+.hide {
+    display: none;
+}

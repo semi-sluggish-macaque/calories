@@ -1,0 +1,13 @@
+  {
+  "autoload": {
+    "psr-4": {
+      "cal\\": "vendor/cal",
+      "app\\": "app"
+    }
+  },
+  "require": {
+    "gabordemooij/redbean": "^v5.7.2",
+    "vlucas/valitron": "^1.4",
+    "phpmailer/phpmailer": "^6.6"
+  }
+}
