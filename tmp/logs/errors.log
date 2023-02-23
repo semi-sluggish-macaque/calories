@@ -3425,3 +3425,87 @@
 ==========
 [2023-02-22 20:48:38 ] Текст ошибки: Контроллерapp\controllers\CaloriesController не найден | Файл: C:\OSPanel\domains\calories\vendor\cal\router.php | Строка: 84
 ==========
+[2023-02-22 22:16:01 ] Текст ошибки: Array to string conversion | Файл: C:\OSPanel\domains\calories\app\controllers\FaceController.php | Строка: 10
+==========
+[2023-02-22 22:21:35 ] Текст ошибки: not found language faceest | Файл: C:\OSPanel\domains\calories\app\widgets\language\Language.php | Строка: 51
+==========
+[2023-02-22 22:21:37 ] Текст ошибки: not found language faceest | Файл: C:\OSPanel\domains\calories\app\widgets\language\Language.php | Строка: 51
+==========
+[2023-02-22 22:24:58 ] Текст ошибки: json_decode(): Argument #1 ($json) must be of type string, array given | Файл: C:\OSPanel\domains\calories\app\controllers\FaceController.php | Строка: 11
+==========
+[2023-02-22 22:38:33 ] Текст ошибки: не найден видC:\OSPanel\domains\calories/app/views/Face/test.php | Файл: C:\OSPanel\domains\calories\vendor\cal\View.php | Строка: 44
+==========
+[2023-02-22 22:39:46 ] Текст ошибки: не найден видC:\OSPanel\domains\calories/app/views/Face/test.php | Файл: C:\OSPanel\domains\calories\vendor\cal\View.php | Строка: 44
+==========
+[2023-02-22 22:40:53 ] Текст ошибки: not found language faceest | Файл: C:\OSPanel\domains\calories\app\widgets\language\Language.php | Строка: 51
+==========
+[2023-02-22 22:45:22 ] Текст ошибки: Undefined array key "test" | Файл: C:\OSPanel\domains\calories\app\controllers\FaceController.php | Строка: 11
+==========
+[2023-02-23 01:37:55 ] Текст ошибки: не найден видC:\OSPanel\domains\calories/app/views/Main/login.php | Файл: C:\OSPanel\domains\calories\vendor\cal\View.php | Строка: 44
+==========
+[2023-02-23 01:38:28 ] Текст ошибки: не найден видC:\OSPanel\domains\calories/app/views/Main/login.php | Файл: C:\OSPanel\domains\calories\vendor\cal\View.php | Строка: 44
+==========
+[2023-02-23 01:42:18 ] Текст ошибки: not found language login | Файл: C:\OSPanel\domains\calories\app\widgets\language\Language.php | Строка: 51
+==========
+[2023-02-23 01:42:32 ] Текст ошибки: не найден видC:\OSPanel\domains\calories/app/views/Main/login.php | Файл: C:\OSPanel\domains\calories\vendor\cal\View.php | Строка: 44
+==========
+[2023-02-23 01:42:58 ] Текст ошибки: not found language login | Файл: C:\OSPanel\domains\calories\app\widgets\language\Language.php | Строка: 51
+==========
+[2023-02-23 01:49:55 ] Текст ошибки: не найден видC:\OSPanel\domains\calories/app/views/Main/login.php | Файл: C:\OSPanel\domains\calories\vendor\cal\View.php | Строка: 44
+==========
+[2023-02-23 11:35:28 ] Текст ошибки: file_put_contents(http://caloriesfile.txt): Failed to open stream: HTTP wrapper does not support writeable connections | Файл: C:\OSPanel\domains\calories\app\controllers\MainController.php | Строка: 72
+==========
+[2023-02-23 11:36:30 ] Текст ошибки: file_put_contents(http://caloriesfile.txt): Failed to open stream: HTTP wrapper does not support writeable connections | Файл: C:\OSPanel\domains\calories\app\controllers\MainController.php | Строка: 66
+==========
+[2023-02-23 11:36:49 ] Текст ошибки: file_put_contents(http://calories/file.txt): Failed to open stream: HTTP wrapper does not support writeable connections | Файл: C:\OSPanel\domains\calories\app\controllers\MainController.php | Строка: 66
+==========
+[2023-02-23 11:39:25 ] Текст ошибки: Object of class stdClass could not be converted to string | Файл: C:\OSPanel\domains\calories\app\controllers\MainController.php | Строка: 73
+==========
+[2023-02-23 11:40:01 ] Текст ошибки: Object of class stdClass could not be converted to string | Файл: C:\OSPanel\domains\calories\app\controllers\MainController.php | Строка: 73
+==========
+[2023-02-23 11:41:23 ] Текст ошибки: Object of class stdClass could not be converted to string | Файл: C:\OSPanel\domains\calories\app\controllers\MainController.php | Строка: 74
+==========
+[2023-02-23 11:49:13 ] Текст ошибки: syntax error, unexpected identifier "пост" | Файл: C:\OSPanel\domains\calories\app\controllers\MainController.php | Строка: 76
+==========
+[2023-02-23 13:03:33 ] Текст ошибки: syntax error, unexpected token "if" | Файл: C:\OSPanel\domains\calories\app\controllers\MainController.php | Строка: 70
+==========
+[2023-02-23 13:05:35 ] Текст ошибки: не найден видC:\OSPanel\domains\calories/app/views/Main/test.php | Файл: C:\OSPanel\domains\calories\vendor\cal\View.php | Строка: 44
+==========
+[2023-02-23 13:06:23 ] Текст ошибки: не найден видC:\OSPanel\domains\calories/app/views/Main/test.php | Файл: C:\OSPanel\domains\calories\vendor\cal\View.php | Строка: 44
+==========
+[2023-02-23 13:16:36 ] Текст ошибки: не найден видC:\OSPanel\domains\calories/app/views/Main/test.php | Файл: C:\OSPanel\domains\calories\vendor\cal\View.php | Строка: 44
+==========
+[2023-02-23 13:18:49 ] Текст ошибки: не найден видC:\OSPanel\domains\calories/app/views/Main/test.php | Файл: C:\OSPanel\domains\calories\vendor\cal\View.php | Строка: 44
+==========
+[2023-02-23 13:19:42 ] Текст ошибки: не найден видC:\OSPanel\domains\calories/app/views/Main/test.php | Файл: C:\OSPanel\domains\calories\vendor\cal\View.php | Строка: 44
+==========
+[2023-02-23 13:25:30 ] Текст ошибки: не найден видC:\OSPanel\domains\calories/app/views/Main/test.php | Файл: C:\OSPanel\domains\calories\vendor\cal\View.php | Строка: 44
+==========
+[2023-02-23 13:25:56 ] Текст ошибки: не найден видC:\OSPanel\domains\calories/app/views/Main/test.php | Файл: C:\OSPanel\domains\calories\vendor\cal\View.php | Строка: 44
+==========
+[2023-02-23 13:26:01 ] Текст ошибки: не найден видC:\OSPanel\domains\calories/app/views/Main/login.php | Файл: C:\OSPanel\domains\calories\vendor\cal\View.php | Строка: 44
+==========
+[2023-02-23 13:26:12 ] Текст ошибки: not found language login | Файл: C:\OSPanel\domains\calories\app\widgets\language\Language.php | Строка: 51
+==========
+[2023-02-23 13:26:21 ] Текст ошибки: not found language ltest | Файл: C:\OSPanel\domains\calories\app\widgets\language\Language.php | Строка: 51
+==========
+[2023-02-23 13:26:30 ] Текст ошибки: не найден видC:\OSPanel\domains\calories/app/views/Main/login.php | Файл: C:\OSPanel\domains\calories\vendor\cal\View.php | Строка: 44
+==========
+[2023-02-23 13:28:34 ] Текст ошибки: не найден видC:\OSPanel\domains\calories/app/views/Face/test.php | Файл: C:\OSPanel\domains\calories\vendor\cal\View.php | Строка: 44
+==========
+[2023-02-23 13:30:00 ] Текст ошибки: Методapp\controllers\FaceController::indexAction не найден | Файл: C:\OSPanel\domains\calories\vendor\cal\router.php | Строка: 80
+==========
+[2023-02-23 13:30:47 ] Текст ошибки: не найден видC:\OSPanel\domains\calories/app/views/Main/test.php | Файл: C:\OSPanel\domains\calories\vendor\cal\View.php | Строка: 44
+==========
+[2023-02-23 13:50:10 ] Текст ошибки: Cannot access offset of type string on string | Файл: C:\OSPanel\domains\calories\app\controllers\MainController.php | Строка: 69
+==========
+[2023-02-23 14:00:40 ] Текст ошибки: не найден видC:\OSPanel\domains\calories/app/views/Main/test.php | Файл: C:\OSPanel\domains\calories\vendor\cal\View.php | Строка: 44
+==========
+[2023-02-23 14:36:52 ] Текст ошибки: not found language main | Файл: C:\OSPanel\domains\calories\app\widgets\language\Language.php | Строка: 51
+==========
+[2023-02-23 14:37:13 ] Текст ошибки: not found language main | Файл: C:\OSPanel\domains\calories\app\widgets\language\Language.php | Строка: 51
+==========
+[2023-02-23 20:42:26 ] Текст ошибки: Class "app\models\User" not found | Файл: C:\OSPanel\domains\calories\app\controllers\MainController.php | Строка: 96
+==========
+[2023-02-23 20:49:00 ] Текст ошибки: Class "app\models\User" not found | Файл: C:\OSPanel\domains\calories\app\controllers\MainController.php | Строка: 121
+==========
