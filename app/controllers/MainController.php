@@ -68,17 +68,14 @@ class MainController extends AppController
         }
 
 //        $this->setMeta(___('tpl_login'));
+
         echo json_encode($response);
         die;
     }
 
     public function indexAction()
     {
-
-//        if (Main::checkAuth()) {
-//            redirect(base_url() . 'face');
-//        }
-
+        unset($_SESSION['user']);
     }
 }
 

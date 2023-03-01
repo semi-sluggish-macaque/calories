@@ -4,9 +4,12 @@ const card = document.querySelector(".card-registr");
 const cardRegistration = document.querySelector('[data-block="registration"]');
 const cardSignIn = document.querySelector('[data-block="sign-in"]');
 
-cardRegistration.addEventListener("submit", getDataFromRegistration);
-cardSignIn.addEventListener("submit", getDataFromSignIn);
-document.addEventListener("click", showSignInForm);
+if (window.location.href == "http://calories/") {
+    cardRegistration.addEventListener("submit", getDataFromRegistration);
+    cardSignIn.addEventListener("submit", getDataFromSignIn);
+    document.addEventListener("click", showSignInForm);
+}
+
 
 function getDataFromRegistration(e) {
     e.preventDefault();
@@ -22,7 +25,6 @@ function getDataFromRegistration(e) {
         email: inputEmail.value,
         password: inputPassword.value,
     };
-
 
 
     (async () => {
@@ -94,11 +96,13 @@ function getDataFromSignIn(e) {
                 window.location.href = "http://calories/face";
             } else {
                 // handle the error
+                // alert(responseData.message);
                 console.error(responseData.message);
                 window.location.href = "http://calories";
 
             }
         } catch (error) {
+            // alert(responseData.message);
             window.location.href = "http://calories";
             console.error(error);
         }
@@ -122,3 +126,13 @@ function showSignInForm(e) {
         cardSignIn.classList.add("hide");
     }
 }
+
+const alertBlock = document.querySelector('.alert-block');
+const closeBtn = document.querySelector('.alert-block__close-btn');
+
+if (closeBtn) {
+    closeBtn.addEventListener('click', () => {
+        alertBlock.classList.add('alert-block--hidden');
+    });
+}
+

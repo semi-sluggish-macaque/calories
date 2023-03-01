@@ -3509,3 +3509,127 @@
 ==========
 [2023-02-23 20:49:00 ] Текст ошибки: Class "app\models\User" not found | Файл: C:\OSPanel\domains\calories\app\controllers\MainController.php | Строка: 121
 ==========
+[2023-02-24 19:20:03 ] Текст ошибки: Undefined array key "user_login_error_login" | Файл: C:\OSPanel\domains\calories\vendor\cal\language.php | Строка: 38
+==========
+[2023-03-01 12:26:20 ] Текст ошибки: not found language fece | Файл: C:\OSPanel\domains\calories\app\widgets\language\Language.php | Строка: 51
+==========
+[2023-03-01 13:55:08 ] Текст ошибки: Undefined array key "user" | Файл: C:\OSPanel\domains\calories\app\controllers\FaceController.php | Строка: 11
+==========
+[2023-03-01 14:45:01 ] Текст ошибки: Cannot access offset of type string on string | Файл: C:\OSPanel\domains\calories\vendor\cal\Model.php | Строка: 119
+==========
+[2023-03-01 14:45:51 ] Текст ошибки: Cannot access offset of type string on string | Файл: C:\OSPanel\domains\calories\vendor\cal\Model.php | Строка: 119
+==========
+[2023-03-01 14:47:09 ] Текст ошибки: Cannot access offset of type string on string | Файл: C:\OSPanel\domains\calories\vendor\cal\Model.php | Строка: 119
+==========
+[2023-03-01 14:48:44 ] Текст ошибки: Cannot access offset of type string on string | Файл: C:\OSPanel\domains\calories\vendor\cal\Model.php | Строка: 119
+==========
+[2023-03-01 14:49:32 ] Текст ошибки: Cannot access offset of type string on string | Файл: C:\OSPanel\domains\calories\vendor\cal\Model.php | Строка: 119
+==========
+[2023-03-01 14:53:05 ] Текст ошибки: Cannot access offset of type string on string | Файл: C:\OSPanel\domains\calories\vendor\cal\Model.php | Строка: 119
+==========
+[2023-03-01 16:12:35 ] Текст ошибки: Typed property cal\Controller::$model must not be accessed before initialization | Файл: C:\OSPanel\domains\calories\app\controllers\FaceController.php | Строка: 27
+==========
+[2023-03-01 16:12:57 ] Текст ошибки: Typed property cal\Controller::$model must not be accessed before initialization | Файл: C:\OSPanel\domains\calories\app\controllers\FaceController.php | Строка: 27
+==========
+[2023-03-01 16:13:13 ] Текст ошибки: Typed property cal\Controller::$model must not be accessed before initialization | Файл: C:\OSPanel\domains\calories\app\controllers\FaceController.php | Строка: 27
+==========
+[2023-03-01 16:13:34 ] Текст ошибки: Typed property cal\Controller::$model must not be accessed before initialization | Файл: C:\OSPanel\domains\calories\app\controllers\FaceController.php | Строка: 27
+==========
+[2023-03-01 16:13:44 ] Текст ошибки: Typed property cal\Controller::$model must not be accessed before initialization | Файл: C:\OSPanel\domains\calories\app\controllers\FaceController.php | Строка: 27
+==========
+[2023-03-01 16:15:15 ] Текст ошибки: Typed property cal\Controller::$model must not be accessed before initialization | Файл: C:\OSPanel\domains\calories\app\controllers\FaceController.php | Строка: 29
+==========
+[2023-03-01 16:16:14 ] Текст ошибки: Too few arguments to function app\models\Face::get_user_food(), 0 passed in C:\OSPanel\domains\calories\app\controllers\FaceController.php on line 29 and exactly 3 expected | Файл: C:\OSPanel\domains\calories\app\models\Face.php | Строка: 9
+==========
+[2023-03-01 16:23:37 ] Текст ошибки: Undefined array key "user" | Файл: C:\OSPanel\domains\calories\app\controllers\FaceController.php | Строка: 28
+==========
+[2023-03-01 17:10:15 ] Текст ошибки: не найден видC:\OSPanel\domains\calories/app/views/Face/getdata.php | Файл: C:\OSPanel\domains\calories\vendor\cal\View.php | Строка: 44
+==========
+[2023-03-01 17:10:55 ] Текст ошибки: не найден видC:\OSPanel\domains\calories/app/views/Face/getdata.php | Файл: C:\OSPanel\domains\calories\vendor\cal\View.php | Строка: 44
+==========
+[2023-03-01 17:13:48 ] Текст ошибки: не найден видC:\OSPanel\domains\calories/app/views/Face/getdata.php | Файл: C:\OSPanel\domains\calories\vendor\cal\View.php | Строка: 44
+==========
+[2023-03-01 17:15:03 ] Текст ошибки: не найден видC:\OSPanel\domains\calories/app/views/Face/getdata.php | Файл: C:\OSPanel\domains\calories\vendor\cal\View.php | Строка: 44
+==========
+[2023-03-01 17:15:43 ] Текст ошибки: не найден видC:\OSPanel\domains\calories/app/views/Face/getdata.php | Файл: C:\OSPanel\domains\calories\vendor\cal\View.php | Строка: 44
+==========
+[2023-03-01 17:17:05 ] Текст ошибки: не найден видC:\OSPanel\domains\calories/app/views/Face/getdata.php | Файл: C:\OSPanel\domains\calories\vendor\cal\View.php | Строка: 44
+==========
+[2023-03-01 17:18:08 ] Текст ошибки: не найден видC:\OSPanel\domains\calories/app/views/Face/getdata.php | Файл: C:\OSPanel\domains\calories\vendor\cal\View.php | Строка: 44
+==========
+[2023-03-01 17:50:40 ] Текст ошибки: file_get_contents(): Argument #2 ($use_include_path) must be of type bool, array given | Файл: C:\OSPanel\domains\calories\app\controllers\FaceController.php | Строка: 46
+==========
+[2023-03-01 17:51:31 ] Текст ошибки: file_get_contents(): Argument #2 ($use_include_path) must be of type bool, array given | Файл: C:\OSPanel\domains\calories\app\controllers\FaceController.php | Строка: 46
+==========
+[2023-03-01 18:01:50 ] Текст ошибки: Undefined variable $day_part | Файл: C:\OSPanel\domains\calories\app\controllers\FaceController.php | Строка: 28
+==========
+[2023-03-01 19:33:44 ] Текст ошибки: Array to string conversion | Файл: C:\OSPanel\domains\calories\app\models\Face.php | Строка: 22
+==========
+[2023-03-01 19:34:28 ] Текст ошибки: Array to string conversion | Файл: C:\OSPanel\domains\calories\app\models\Face.php | Строка: 22
+==========
+[2023-03-01 19:35:38 ] Текст ошибки: Array to string conversion | Файл: C:\OSPanel\domains\calories\app\models\Face.php | Строка: 22
+==========
+[2023-03-01 19:35:58 ] Текст ошибки: SQLSTATE[21S01]: Insert value list does not match column list: 1136 Column count doesn't match value count at row 1 | Файл: C:\OSPanel\domains\calories\vendor\gabordemooij\redbean\RedBeanPHP\Driver\RPDO.php | Строка: 206
+==========
+[2023-03-01 19:36:29 ] Текст ошибки: SQLSTATE[21S01]: Insert value list does not match column list: 1136 Column count doesn't match value count at row 1 | Файл: C:\OSPanel\domains\calories\vendor\gabordemooij\redbean\RedBeanPHP\Driver\RPDO.php | Строка: 206
+==========
+[2023-03-01 19:36:55 ] Текст ошибки: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '2' for key 'PRIMARY' | Файл: C:\OSPanel\domains\calories\vendor\gabordemooij\redbean\RedBeanPHP\Driver\RPDO.php | Строка: 206
+==========
+[2023-03-01 19:37:39 ] Текст ошибки: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '2' for key 'PRIMARY' | Файл: C:\OSPanel\domains\calories\vendor\gabordemooij\redbean\RedBeanPHP\Driver\RPDO.php | Строка: 206
+==========
+[2023-03-01 19:37:40 ] Текст ошибки: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '2' for key 'PRIMARY' | Файл: C:\OSPanel\domains\calories\vendor\gabordemooij\redbean\RedBeanPHP\Driver\RPDO.php | Строка: 206
+==========
+[2023-03-01 19:44:42 ] Текст ошибки: Array to string conversion | Файл: C:\OSPanel\domains\calories\app\models\Face.php | Строка: 24
+==========
+[2023-03-01 19:49:44 ] Текст ошибки: Array to string conversion | Файл: C:\OSPanel\domains\calories\app\models\Face.php | Строка: 24
+==========
+[2023-03-01 19:50:47 ] Текст ошибки: Array to string conversion | Файл: C:\OSPanel\domains\calories\app\models\Face.php | Строка: 24
+==========
+[2023-03-01 19:55:03 ] Текст ошибки: Plugin 'prepare' does not exist, add this plugin using: R::ext('prepare') | Файл: C:\OSPanel\domains\calories\vendor\gabordemooij\redbean\RedBeanPHP\Facade.php | Строка: 3427
+==========
+[2023-03-01 19:57:13 ] Текст ошибки: Plugin 'prepare' does not exist, add this plugin using: R::ext('prepare') | Файл: C:\OSPanel\domains\calories\vendor\gabordemooij\redbean\RedBeanPHP\Facade.php | Строка: 3427
+==========
+[2023-03-01 20:10:14 ] Текст ошибки: Array to string conversion | Файл: C:\OSPanel\domains\calories\vendor\gabordemooij\redbean\RedBeanPHP\QueryWriter\AQueryWriter.php | Строка: 223
+==========
+[2023-03-01 20:21:14 ] Текст ошибки: file_put_contents() expects at most 4 arguments, 6 given | Файл: C:\OSPanel\domains\calories\app\controllers\FaceController.php | Строка: 56
+==========
+[2023-03-01 20:22:11 ] Текст ошибки: Undefined array key "user" | Файл: C:\OSPanel\domains\calories\app\controllers\FaceController.php | Строка: 32
+==========
+[2023-03-01 20:22:11 ] Текст ошибки: Undefined array key "user" | Файл: C:\OSPanel\domains\calories\app\controllers\FaceController.php | Строка: 32
+==========
+[2023-03-01 20:25:00 ] Текст ошибки: Array to string conversion | Файл: C:\OSPanel\domains\calories\vendor\gabordemooij\redbean\RedBeanPHP\QueryWriter\AQueryWriter.php | Строка: 223
+==========
+[2023-03-01 20:26:55 ] Текст ошибки: foreach() argument must be of type array|object, string given | Файл: C:\OSPanel\domains\calories\vendor\gabordemooij\redbean\RedBeanPHP\Driver\RPDO.php | Строка: 123
+==========
+[2023-03-01 20:27:23 ] Текст ошибки: Trying to access array offset on value of type null | Файл: C:\OSPanel\domains\calories\app\controllers\FaceController.php | Строка: 51
+==========
+[2023-03-01 20:27:54 ] Текст ошибки: Trying to access array offset on value of type null | Файл: C:\OSPanel\domains\calories\app\controllers\FaceController.php | Строка: 51
+==========
+[2023-03-01 20:28:24 ] Текст ошибки: Array to string conversion | Файл: C:\OSPanel\domains\calories\vendor\gabordemooij\redbean\RedBeanPHP\QueryWriter\AQueryWriter.php | Строка: 223
+==========
+[2023-03-01 20:30:02 ] Текст ошибки: Array to string conversion | Файл: C:\OSPanel\domains\calories\vendor\gabordemooij\redbean\RedBeanPHP\QueryWriter\AQueryWriter.php | Строка: 223
+==========
+[2023-03-01 20:30:57 ] Текст ошибки: SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect date value: '2019.99' for column `cal`.`user_meal`.`time` at row 1 | Файл: C:\OSPanel\domains\calories\vendor\gabordemooij\redbean\RedBeanPHP\Driver\RPDO.php | Строка: 206
+==========
+[2023-03-01 20:31:21 ] Текст ошибки: SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect date value: '2019' for column `cal`.`user_meal`.`time` at row 1 | Файл: C:\OSPanel\domains\calories\vendor\gabordemooij\redbean\RedBeanPHP\Driver\RPDO.php | Строка: 206
+==========
+[2023-03-01 20:31:32 ] Текст ошибки: syntax error, unexpected floating-point number ".01" | Файл: C:\OSPanel\domains\calories\app\controllers\FaceController.php | Строка: 58
+==========
+[2023-03-01 20:32:38 ] Текст ошибки: Array to string conversion | Файл: C:\OSPanel\domains\calories\vendor\gabordemooij\redbean\RedBeanPHP\QueryWriter\AQueryWriter.php | Строка: 223
+==========
+[2023-03-01 20:43:45 ] Текст ошибки: Undefined variable $day_part | Файл: C:\OSPanel\domains\calories\app\controllers\FaceController.php | Строка: 31
+==========
+[2023-03-01 20:44:49 ] Текст ошибки: Undefined variable $day_part | Файл: C:\OSPanel\domains\calories\app\controllers\FaceController.php | Строка: 30
+==========
+[2023-03-01 20:44:50 ] Текст ошибки: Undefined variable $day_part | Файл: C:\OSPanel\domains\calories\app\controllers\FaceController.php | Строка: 30
+==========
+[2023-03-01 20:45:27 ] Текст ошибки: Undefined variable $day_part | Файл: C:\OSPanel\domains\calories\app\controllers\FaceController.php | Строка: 31
+==========
+[2023-03-01 20:50:51 ] Текст ошибки: syntax error, unexpected token ";" | Файл: C:\OSPanel\domains\calories\app\controllers\FaceController.php | Строка: 19
+==========
+[2023-03-01 20:52:06 ] Текст ошибки: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'lunch' in 'where clause' | Файл: C:\OSPanel\domains\calories\vendor\gabordemooij\redbean\RedBeanPHP\Driver\RPDO.php | Строка: 206
+==========
+[2023-03-01 20:56:18 ] Текст ошибки: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'lunch' in 'where clause' | Файл: C:\OSPanel\domains\calories\vendor\gabordemooij\redbean\RedBeanPHP\Driver\RPDO.php | Строка: 206
+==========
+[2023-03-01 21:05:42 ] Текст ошибки: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'lunch' in 'where clause' | Файл: C:\OSPanel\domains\calories\vendor\gabordemooij\redbean\RedBeanPHP\Driver\RPDO.php | Строка: 206
+==========

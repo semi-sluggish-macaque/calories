@@ -6,7 +6,7 @@
         </div>
         <div class="welcome__right">
             <div class="welcome__block card-registr">
-                <div class="card-registr__body" data-block="registration">
+                <div class="card-registr__body hide" data-block="registration">
                     <h2 class="card-registr__title">Create an account</h2>
                     <h3 class="card-registr__subtitle">Let's get started</h3>
                     <form class="card-registr__form form-registration" id="form-1">
@@ -27,7 +27,7 @@
                         I already have an account
                     </button>
                 </div>
-                <div class="card-registr__body hide" data-block="sign-in">
+                <div class="card-registr__body " data-block="sign-in">
                     <h2 class="card-registr__title">Sign in</h2>
                     <h3 class="card-registr__subtitle">Let's get started</h3>
                     <form  class="card-registr__form form-registration" id="form-2">

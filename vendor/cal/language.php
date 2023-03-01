@@ -17,15 +17,17 @@ class language
 //        не знаю зачем тут фигурные скобки, если дебажить, то они ни на что не влияют
         $lang_layout = APP . "/languages/${code}.php";
         $lang_view = APP . "/languages/${code}/{$view['controller']}/{$view['action']}.php";
-        if(file_exists($lang_layout)){
+//        debug($lang_view, 1);
+        if (file_exists($lang_layout)) {
             self::$lang_layout = require_once $lang_layout;
         }
 
-        if(file_exists($lang_view)){
+        if (file_exists($lang_view)) {
             self::$lang_view = require_once $lang_view;
         }
 
-            self::$lang_data = array_merge(self::$lang_layout, self::$lang_view);
+        self::$lang_data = array_merge(self::$lang_layout, self::$lang_view);
+//        debug(self::$lang_data["user_login_error_login"], 1);
 
     }
 
