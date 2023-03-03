@@ -896,6 +896,11 @@ body {
     display: flex;
     justify-content: space-between;
     padding: 0px 20px;
+    cursor: pointer;
+}
+
+.added-product__item:hover {
+    background-color: #f0efef;
 }
 .added-product__left {
     display: flex;

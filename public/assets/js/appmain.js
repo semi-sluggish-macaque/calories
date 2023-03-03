@@ -23,33 +23,6 @@ arrow.addEventListener("click", closeMenuSlider);
 document.addEventListener("input", rangeAndCountCalories);
 document.addEventListener("click", addProductToCart);
 
-// перед началом работы рендерим на страинцу те продукты, которые лежат в БД
-// window.addEventListener("DOMContentLoaded", () => {
-//     fetch("http://localhost:3000/my-products")
-//         .then((response) => response.json())
-//         .then((data) => {
-//             data.forEach((product) => {
-//                 // разметка
-//                 const markUp = `<li class="added-product__item" data-productName =${product.name}>
-//     <div class="added-product__left">
-//       <div class="added-product__img">
-//         <img src="./img/img products/${product.src}.png" alt="">
-//       </div>
-//       <div class="added-product__title">${product.name}</div>
-//     </div>
-//     <div class="added-product__right">
-//       <div class="added-product__calories">${product.calories} калорий </div>
-//       <div class="added-product__quantity">${product.quantity} грамм</div>
-//     </div>
-//   </li>`;
-//
-//                 const ulList = document.querySelector(".added-product__list");
-//                 // рендерим на страницу
-//                 ulList.insertAdjacentHTML("beforeend", markUp);
-//                 countCalories();
-//             });
-//         });
-// });
 
 //logic
 function openModal() {
@@ -66,7 +39,6 @@ data-productName =${product.name}>
     data-name="${product.name}"
      data-calories="${product.cal}">
       <div class="product-card__img">
-<!--        <img src="./img/img products/${product.src}.png" alt="" />-->
       </div>
       <h2 class="product-card__title">${product.name}</h2>
     </div>
@@ -203,93 +175,9 @@ function addProductToCart(e) {
             modal.classList.remove("slide-menu_active");
             menuSlider.classList.remove("product-counter_active");
 
-            // если продукт уже есть, мы не должны опять  его отрисовывать и добавлять в БДБ надо в существующем просто изменить количество и калории
-            // const HTMLCollectionOfProducts = ulList.children;
-            // const arrOfProducts = Array.from(HTMLCollectionOfProducts); // делаем с HTMLCollection массив
-            //
-            // // мы запускаем эту часть кода несколько раз для каждого ли в списке. В этом ошибка\
-            // // изменил foreach на some
-            // arrOfProducts.some((el) => {
-            //     if (el.innerText.includes(name)) {
-            //         console.log("ebat");
-            //
-            //         // находим в списке продуктов нужный нам, и меняем у него калории и грамы
-            //         const alreadyExistedProduct = ulList.querySelector(
-            //             `[data-productname=${name}]`
-            //         );
-            //         console.log(alreadyExistedProduct);
-            //         let caloriesOfAlreadyExistedProduct = +alreadyExistedProduct
-            //             .querySelector(".added-product__calories")
-            //             .innerText.replace(/\D+\.?\D+/g, ""); // калории
-            //         // console.log(caloriesOfAlreadyExistedProduct);
-            //
-            //         let quantityOfAlreadyExistedProduct = +alreadyExistedProduct
-            //             .querySelector(".added-product__quantity")
-            //             .innerText.replace(/\D+\.?\D+/g, ""); // граммы
-            //         // console.log(quantityOfAlreadyExistedProduct);
-            //
-            //         // добавляем калории и граммы уже к существующим продуктам
-            //         caloriesOfAlreadyExistedProduct =
-            //             parseInt(caloriesOfAlreadyExistedProduct) + parseInt(calories);
-            //         quantityOfAlreadyExistedProduct =
-            //             parseInt(quantityOfAlreadyExistedProduct) + parseInt(quantity);
-            //
-            //         // console.log(caloriesOfAlreadyExistedProduct);
-            //         alreadyExistedProduct.querySelector(
-            //             ".added-product__calories"
-            //         ).innerText = caloriesOfAlreadyExistedProduct + " калорий";
-            //
-            //         alreadyExistedProduct.querySelector(
-            //             ".added-product__quantity"
-            //         ).innerText = quantityOfAlreadyExistedProduct + " грамм";
-            //
-            //         // добавляем калории и граммы уже к существующим продуктам в БД
-            //         // в url указываем id объекта который хочем поменять, сначала найдем id нужного нам объекта
-            //         fetch(`http://localhost:3000/my-products`)
-            //             .then((response) => response.json())
-            //             .then((data) => {
-            //                 const indexProd = data.findIndex((el) => el.name == name);
-            //                 const Id = indexProd + 1;
-            //                 // console.log(indexProd, Id);
-            //
-            //                 //надо заменить калории и количество на quantityOfAlreadyExistedProduct и caloriesOfAlreadyExistedProduct
-            //                 const updatedProduct = {
-            //                     name,
-            //                     quantity: parseInt(quantityOfAlreadyExistedProduct),
-            //                     calories: parseInt(caloriesOfAlreadyExistedProduct),
-            //                     src: name,
-            //                 };
-            //
-            //                 fetch(`http://localhost:3000/my-products/${Id}`, {
-            //                     method: "PATCH",
-            //                     headers: {
-            //                         "Content-Type": "application/json",
-            //                     },
-            //                     body: JSON.stringify(updatedProduct),
-            //                 })
-            //                     .then((res) => res.json())
-            //                     .then((json) => countCalories());
-            //             });
-            //
-            //         k = true;
-            //     }
-            // });
+
             if (k == false) {
                 console.log("rats");
-                // // записываем новые продукты в массив в бд
-                // fetch("face/addProduct", {
-                //     method: "POST",
-                //     body: JSON.stringify(dataAboutProduct),
-                //     headers: {
-                //         "Content-Type": "application/json",
-                //         Accept: "application/json",
-                //     },
-                // })
-                //     .then((response) => response.json())
-                //     .then((data) => {
-                //         // countCalories();
-                //         console.log(response);
-                //     });
                 (async () => {
                     try {
                         const response = await fetch("face/addProduct", {
@@ -304,16 +192,6 @@ function addProductToCart(e) {
                         console.log(responseData);
                         const span = document.querySelector('.section-addProducts__num');
                         span.textContent = responseData;
-                        if (responseData.status === "success") {
-                            // const span = document.querySelector('.section-addProducts__num');
-                            // span.textContent = '500';
-                        } else {
-                            // handle the error
-                            // alert(responseData.message);
-                            console.error(responseData.message);
-                            // window.location.href = "http://calories";
-
-                        }
                     } catch (error) {
                         // alert(responseData.message);
                         // window.location.href = "http://calories";
@@ -366,12 +244,3 @@ function countCalories() {
             allCalories.innerText = sumOfCalories;
         });
 }
-
-// const alertBlock = document.querySelector('.alert-block');
-// const closeBtn = document.querySelector('.alert-block__close-btn');
-//
-// if (closeBtn) {
-//     closeBtn.addEventListener('click', () => {
-//         alertBlock.classList.add('alert-block--hidden');
-//     });
-// }
