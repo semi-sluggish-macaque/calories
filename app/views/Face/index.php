@@ -4,9 +4,9 @@
         <div class="section-addProducts__container">
             <div class="section-addProducts__block">
                 <div class="section-addProducts__header">
-                    <div class="section-addProducts__title">Завтрак</div>
+                    <div class="section-addProducts__title"><?= $day_part ?></div>
                     <div class="section-addProducts__summary">
-                        Итого: <span class="section-addProducts__num"> <?php echo $totalCalories?> </span> калорий
+                        Итого: <span class="section-addProducts__num"> <?php echo $totalCalories ?> </span> калорий
                     </div>
                 </div>
                 <div class="section-addProducts__begin">
@@ -14,21 +14,29 @@
                         <div class="added-product">
                             <ul class="added-product__list">
                                 <?php foreach ($data as $product): ?>
-                                    <li class="added-product__item">
-                                        <div class="added-product__left">
-                                            <div class="added-product__img">
-                                                <!--                                                <img src="./img/img products/apple.png" alt="">-->
+
+                                    <li class="added-product__item" data-productName=<?php echo $product['name'] ?>
+                                    data-id=<?php echo $product["id"] ?>
+                                        data-caloriesInBD=<?php echo $product['cal'] ?>>
+                                        <div class="added-product__content">
+                                            <div class="added-product__left">
+                                                <div class="added-product__img">
+                                                    <!--                                                    <img src="./img/img products/${product.src}.png" alt="">-->
+                                                </div>
+                                                <div class="added-product__title"><?php echo $product["name"] ?>
+                                                </div>
                                             </div>
-                                            <div class="added-product__title"><?php echo $product["name"] ?></div>
+                                            <div class="added-product__right">
+                                                <div class="added-product__calories"><?php echo($product["amount"] * $product["cal"] / 100) ?>
+                                                    калорий
+                                                </div>
+                                                <div class="added-product__quantity"><?php echo $product["amount"] ?>
+                                                    грамм
+                                                </div>
+
+                                            </div>
                                         </div>
-                                        <div class="added-product__right">
-                                            <div class="added-product__calories"><?php echo($product["amount"] * $product["cal"] /100) ?>
-                                                калорий
-                                            </div>
-                                            <div class="added-product__quantity"><?php echo $product["amount"]?>
-                                                грамм
-                                            </div>
-                                        </div>
+                                        <div class="added-product__close"></div>
                                     </li>
                                 <?php endforeach; ?>
                             </ul>
@@ -153,6 +161,15 @@
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+                        <div class="edit-product">
+                            <div class="edit-product__body">
+                                <!-- <div class="edit-product__arrow-back">
+                                  <img src="./img/arrow.png" alt="" />
+                                </div> -->
+                                <div class="edit-product__content"></div>
+                                <div class="edit-product__close"></div>
                             </div>
                         </div>
                     </div>

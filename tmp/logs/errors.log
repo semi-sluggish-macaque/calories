@@ -3635,3 +3635,21 @@
 ==========
 [2023-03-02 22:43:00 ] Текст ошибки: Undefined variable $day_part | Файл: C:\OSPanel\domains\calories\app\models\Face.php | Строка: 17
 ==========
+[2023-03-03 17:48:08 ] Текст ошибки: Undefined array key "  id" | Файл: C:\OSPanel\domains\calories\app\views\Face\index.php | Строка: 18
+==========
+[2023-03-03 18:02:26 ] Текст ошибки: Undefined array key "user" | Файл: C:\OSPanel\domains\calories\app\controllers\FaceController.php | Строка: 19
+==========
+[2023-03-03 18:19:13 ] Текст ошибки: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'day_part = 'lunch' AND time = '2023-03-03' AND id = 1)' at line 1 | Файл: C:\OSPanel\domains\calories\vendor\gabordemooij\redbean\RedBeanPHP\Driver\RPDO.php | Строка: 206
+==========
+[2023-03-06 15:19:43 ] Текст ошибки: Cannot access offset of type string on string | Файл: C:\OSPanel\domains\calories\app\controllers\FaceController.php | Строка: 56
+==========
+[2023-03-06 15:20:06 ] Текст ошибки: Cannot access offset of type string on string | Файл: C:\OSPanel\domains\calories\app\controllers\FaceController.php | Строка: 56
+==========
+[2023-03-06 15:20:48 ] Текст ошибки: Cannot access offset of type string on string | Файл: C:\OSPanel\domains\calories\app\controllers\FaceController.php | Строка: 56
+==========
+[2023-03-07 14:13:05 ] Текст ошибки: Array to string conversion | Файл: C:\OSPanel\domains\calories\app\controllers\FaceController.php | Строка: 25
+==========
+[2023-03-07 14:14:02 ] Текст ошибки: syntax error, unexpected token "}", expecting ";" or "{" | Файл: C:\OSPanel\domains\calories\app\controllers\FaceController.php | Строка: 27
+==========
+[2023-03-07 14:14:08 ] Текст ошибки: Undefined variable $day_part | Файл: C:\OSPanel\domains\calories\app\views\Face\index.php | Строка: 7
+==========

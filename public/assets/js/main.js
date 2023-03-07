@@ -3,7 +3,6 @@ const btnSignIn = document.querySelector(".card-registr__sign-in-btn");
 const card = document.querySelector(".card-registr");
 const cardRegistration = document.querySelector('[data-block="registration"]');
 const cardSignIn = document.querySelector('[data-block="sign-in"]');
-
 if (window.location.href == "http://calories/") {
     cardRegistration.addEventListener("submit", getDataFromRegistration);
     cardSignIn.addEventListener("submit", getDataFromSignIn);

@@ -23,6 +23,14 @@ class Face extends AppModel
 
     }
 
+    public function update_user_food($user_id, $day_part, $time, $amount, $id)
+    {
+//        R::exec("UPDATE `user_meal` SET `amount`= ? WHERE user_id = ?  day_part = ? AND time = ? AND id = ?)", [$amount, $user_id, $day_part, $time, $id]);
+
+        R::exec("UPDATE `user_meal` SET `amount` = ? WHERE user_id = ? AND day_part = ? AND time = ? AND id = ?", [$amount, $user_id, $day_part, $time, $id]);
+
+    }
+
     public function delete_user_food($user_id, $day_part, $time, $id)
     {
         R::exec("DELETE FROM user_meal WHERE id = ? AND user_id = ? AND time = ? AND day_part = ?", [$id, $user_id, $time, $day_part]);
