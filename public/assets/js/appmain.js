@@ -16,6 +16,9 @@ const btnAddProduct = document.querySelector(".product-counter__btn");
 const ulList = document.querySelector(".added-product__list");
 const editModalWindow = document.querySelector(".edit-product");
 const deleteProductBtn = document.querySelector(".added-product__close");
+const changerBtn = document.querySelectorAll(".changer");
+const obertka = document.querySelector(".obertka");
+const arrows = document.querySelectorAll(".arrows");
 
 
 // events
@@ -29,47 +32,121 @@ document.addEventListener("click", addProductToCart);
 document.addEventListener("click", addEditedProduct);
 ulList.addEventListener("click", editProduct);
 document.addEventListener("click", deleteProduct);
+obertka.addEventListener("click", day_part_changer);
+arrows.forEach((arrow) => {
+    arrow.addEventListener("click", changer);
 
-window.addEventListener("DOMContentLoaded", () => {
-    fetch()
-        .then((response) => response.json())
-        .then((data) => {
-            data.forEach((product) => {
-                // разметка
-                const markUp = `<li class="added-product__item" data-productName =${product.name} data-id = ${product.id} data-caloriesInBD=${product.caloriesInBD}>
+})
+changerBtn.forEach((item) => {
+    item.addEventListener("click", changer)
+})
+
+let change = 0;
+let change_day_part = 0;
+
+function day_part_changer(e) {
+    if (e.target.classList.contains("breakfast")) {
+        change_day_part = "breakfast";
+        render();
+    }
+    if (e.target.classList.contains("dinner")) {
+        change_day_part = "dinner";
+        render();
+    }
+    if (e.target.classList.contains("lunch")) {
+        change_day_part = "lunch";
+        render();
+    }
+}
+
+function changer(e) {
+    e.preventDefault()
+    if (e.target.classList.contains("previous")) {
+        change--;
+    }
+    if (e.target.classList.contains("next")) {
+        change++;
+    }
+    const items = document.querySelectorAll(".added-product__item");
+    items.forEach((item) => {
+        item.remove();
+    })
+    render();
+}
+
+window.addEventListener("DOMContentLoaded", render());
+
+function render() {
+    const span = document.querySelector('.section-addProducts__num');
+    span.textContent = 0;
+    const dateOnPage = document.querySelector('.date');
+    dateOnPage.textContent = currentDate(change);
+    addedProducts = document.querySelectorAll(".added-product__item");
+    if (addedProducts) {
+        addedProducts.forEach((product) => {
+            product.remove()
+        })
+    }
+    (async () => {
+        try {
+            const response = await fetch("face/render", {
+                method: "POST",
+                headers: {
+                    Accept: "application/json",
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    date: currentDate(change),
+                    dayPart: day_part(change_day_part),
+                }),
+            });
+            const data = await response.json();
+            products = data.products
+            if (products) {
+                products.forEach((product) => {
+                    // разметка
+                    const markUp = `<li class="added-product__item" data-productName =${product.name} data-id = ${product.id} data-caloriesInBD=${product.cal}>
     <div class="added-product__content"> 
         <div class="added-product__left">
             <div class="added-product__img">
-                 <img src="./img/img products/${product.src}.png" alt="">
+<!--                 <img src="./img/img products/${product.src}.png" alt="">-->
              </div>
              <div class="added-product__title">${product.name}
            </div>
           </div>
 <div class="added-product__right">
-  <div class="added-product__calories">${product.calories} калорий </div>
-  <div class="added-product__quantity">${product.quantity} грамм</div>
+  <div class="added-product__calories">${(product.cal * product.amount) / 100} калорий </div>
+  <div class="added-product__quantity">${product.amount} грамм</div>
  
 </div>
     </div>
     <div class="added-product__close"></div>
   </li>`;
 
-                const ulList = document.querySelector(".added-product__list");
-                // рендерим на страницу
-                ulList.insertAdjacentHTML("beforeend", markUp);
-                countCalories();
-            });
-        });
-});
+                    const ulList = document.querySelector(".added-product__list");
+                    // рендерим на страницу
+                    ulList.insertAdjacentHTML("beforeend", markUp);
+                    const span = document.querySelector('.section-addProducts__num');
+                    span.textContent = data.totalCalories;
+                });
+            } else {
+
+            }
+
+        } catch (error) {
+            console.error(error);
+        }
+    })();
+}
 
 //logic
 function openModal() {
     modal.classList.add("slide-menu_active");
     list.innerHTML = "";
     //render
+    console.log(getData())
     getData().then((products) => {
         products.forEach((product) => {
-            console.log(product)
             const markup = `<li class="slide-menu__item product-card"
 data-productName =${product.name}>
     <div class="product-card__body" 
@@ -217,6 +294,8 @@ function addProductToCart(e) {
                 quantity: parseInt(quantity),
                 calories: parseInt(calories),
                 caloriesInBD,
+                day_part: day_part(change_day_part),
+                currentDate: currentDate(change),
             };
             console.log(dataAboutProduct);
             // закрываем открытые окна
@@ -405,6 +484,8 @@ function addEditedProduct(e) {
             name,
             quantity: parseInt(quantity),
             calories: parseInt(calories),
+            day_part: day_part(change_day_part),
+            currentDate: currentDate(change),
         };
 
         console.log(dataAboutProduct);
@@ -447,7 +528,7 @@ function addEditedProduct(e) {
     }
 }
 
-function deleteProduct(e) {
+async function deleteProduct(e) {
     if (e.target.classList.contains("added-product__close")) {
         console.log("kotiki");
         const productWeWantToDelete = e.target.closest("li");
@@ -456,57 +537,89 @@ function deleteProduct(e) {
         console.log(id);
         // удаляем продукт с разметки
         productWeWantToDelete.remove();
+        // const dayPart = day_part(change_day_part)
+        // const currentDate = currentDate(change)
 
+        const deleteBody = {
+            dayPart: day_part(change_day_part),
+            currentDate: currentDate(change),
+            id
+        }
         // удаляем с БД
-        (async () => {
-            try {
-                const response = await fetch("face/delete", {
-                    method: "POST",
-                    headers: {
-                        Accept: "application/json",
-                        "Content-Type": "application/json",
-                    },
-                    body: JSON.stringify(id),
-                });
-                const responseData = await response.json();
-                console.log(responseData);
-                const span = document.querySelector('.section-addProducts__num');
-                span.textContent = responseData;
-            } catch (error) {
-                console.error(error);
-            }
-        })();
+
+        try {
+            const response = await fetch("face/delete", {
+                method: "POST",
+                headers: {
+                    Accept: "application/json",
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(deleteBody),
+            });
+            const responseData = await response.json();
+            console.log(responseData);
+            const span = document.querySelector('.section-addProducts__num');
+            span.textContent = responseData;
+        } catch (error) {
+            console.error(error);
+        }
+
     }
 }
 
 //get data
 async function getData() {
-    const response = await fetch("face/getdata");
-    const data = await response.json();
-    // console.log(data);
-    return data;
-}
-
-// считать сколько всего калорий
-function countCalories() {
-    const allCalories = document.querySelector(".section-addProducts__num");
-    fetch("http://localhost:3000/my-products")
-        .then((response) => response.json())
-        .then((data) => {
-            let sumOfCalories = 0;
-            data.forEach((product) => {
-                sumOfCalories += parseInt(product.calories);
-            });
-            allCalories.innerText = sumOfCalories;
+    try {
+        const response = await fetch("face/getdata", {
+            method: "POST",
+            headers: {
+                Accept: "application/json",
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                date: currentDate(change),
+                dayPart: day_part(change_day_part),
+            }),
         });
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error(error);
+    }
 }
 
-function currentDate(change = 0) {
+function currentDate(change) {
     let today = new Date();
     let formattedDate = today.toISOString().slice(0, 10); // gives format 'Y-m-d'
     let oneDayAgo = new Date(formattedDate);
-    oneDayAgo.setDate(oneDayAgo.getDate() - change);
+    oneDayAgo.setDate(oneDayAgo.getDate() + change);
     let formattedOneDayAgo = oneDayAgo.toISOString().slice(0, 10); // gives format 'Y-m-d'
     return formattedOneDayAgo;
 }
 
+function day_part(day_part = 0) {
+    if (day_part) {
+        document.querySelector('.active').classList.remove('active')
+        const day_part_var = document.querySelector(`.${day_part}`);
+        day_part_var.classList.add("active")
+        return day_part
+    } else {
+        const current_time = new Date().getHours();
+        if (current_time >= 4 && current_time <= 12) {
+            const breakfast = document.querySelector(".breakfast");
+            breakfast.classList.add("active")
+            return 'breakfast';
+        }
+        if (current_time >= 13 && current_time <= 17) {
+            const dinner = document.querySelector(".dinner");
+            dinner.classList.add("active")
+            return 'dinner';
+        }
+        if (current_time >= 18) {
+            const lunch = document.querySelector(".lunch");
+            lunch.classList.add("active")
+            return 'lunch';
+        }
+    }
+
+}

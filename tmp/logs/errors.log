@@ -3653,3 +3653,29 @@
 ==========
 [2023-03-07 14:14:08 ] Текст ошибки: Undefined variable $day_part | Файл: C:\OSPanel\domains\calories\app\views\Face\index.php | Строка: 7
 ==========
+[2023-03-07 14:21:47 ] Текст ошибки: Undefined variable $current_date | Файл: C:\OSPanel\domains\calories\app\controllers\FaceController.php | Строка: 21
+==========
+[2023-03-07 14:22:07 ] Текст ошибки: Array to string conversion | Файл: C:\OSPanel\domains\calories\app\controllers\FaceController.php | Строка: 24
+==========
+[2023-03-07 14:22:18 ] Текст ошибки: Array to string conversion | Файл: C:\OSPanel\domains\calories\app\controllers\FaceController.php | Строка: 24
+==========
+[2023-03-07 14:25:22 ] Текст ошибки: Undefined variable $day_part | Файл: C:\OSPanel\domains\calories\app\controllers\FaceController.php | Строка: 22
+==========
+[2023-03-07 14:25:37 ] Текст ошибки: Undefined variable $current_date | Файл: C:\OSPanel\domains\calories\app\controllers\FaceController.php | Строка: 22
+==========
+[2023-03-07 14:25:43 ] Текст ошибки: Undefined variable $current_date | Файл: C:\OSPanel\domains\calories\app\controllers\FaceController.php | Строка: 22
+==========
+[2023-03-07 14:25:48 ] Текст ошибки: compact(): Undefined variable $data | Файл: C:\OSPanel\domains\calories\app\controllers\FaceController.php | Строка: 23
+==========
+[2023-03-07 15:20:36 ] Текст ошибки: syntax error, unexpected token ";", expecting ")" | Файл: C:\OSPanel\domains\calories\app\controllers\FaceController.php | Строка: 32
+==========
+[2023-03-07 15:26:34 ] Текст ошибки: Illegal offset type | Файл: C:\OSPanel\domains\calories\app\controllers\FaceController.php | Строка: 36
+==========
+[2023-03-07 19:11:02 ] Текст ошибки: Undefined array key "currentDate" | Файл: C:\OSPanel\domains\calories\app\controllers\FaceController.php | Строка: 62
+==========
+[2023-03-07 19:14:20 ] Текст ошибки: syntax error, unexpected token "," | Файл: C:\OSPanel\domains\calories\app\controllers\FaceController.php | Строка: 57
+==========
+[2023-03-08 12:14:22 ] Текст ошибки: Undefined array key "currentDate" | Файл: C:\OSPanel\domains\calories\app\controllers\FaceController.php | Строка: 45
+==========
+[2023-03-08 15:26:27 ] Текст ошибки: Undefined array key "day_part" | Файл: C:\OSPanel\domains\calories\app\controllers\FaceController.php | Строка: 75
+==========

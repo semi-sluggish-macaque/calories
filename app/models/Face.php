@@ -11,9 +11,9 @@ class Face extends AppModel
         return R::getAll("SELECT * FROM user_meal JOIN food ON user_meal.id = food.id WHERE user_id = $user_id AND day_part = '$day_part' AND time = '$current_date'");
     }
 
-    public function get_popular_food($day_part, $current_date)
+    public function get_popular_food($day_part, $current_date, $user_id)
     {
-        return R::getAll("SELECT * FROM food WHERE id NOT IN ( SELECT food.id FROM food JOIN user_meal ON food.id = user_meal.id WHERE day_part = '$day_part' AND time = '$current_date');");
+        return R::getAll("SELECT * FROM food WHERE id NOT IN ( SELECT food.id FROM food JOIN user_meal ON food.id = user_meal.id WHERE day_part = '$day_part' AND time = '$current_date' AND user_id = $user_id);");
 
     }
 
@@ -34,13 +34,14 @@ class Face extends AppModel
     public function delete_user_food($user_id, $day_part, $time, $id)
     {
         R::exec("DELETE FROM user_meal WHERE id = ? AND user_id = ? AND time = ? AND day_part = ?", [$id, $user_id, $time, $day_part]);
+//        R::exec("DELETE FROM user_meal WHERE id = ? AND user_id = ? AND time = ? AND day_part = ?", [2, 21, '2023-03-08', 'dinner']);
 
     }
 
 
     public function calculate_total_calories($user_id, $day_part, $current_date)
     {
-        return (R::getCell("SELECT sum(cal*amount) FROM user_meal JOIN food ON user_meal.id = food.id WHERE user_id = $user_id AND day_part = '$day_part' AND time = '$current_date'")) / 100;
+        return (R::getCell("SELECT sum(cal*amount) FROM user_meal JOIN food ON user_meal.id = food.id WHERE user_id = $user_id  AND time = '$current_date'")) / 100;
 
     }
 

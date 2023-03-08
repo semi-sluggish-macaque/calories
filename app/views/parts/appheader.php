@@ -30,17 +30,17 @@ use cal\View;
 <body style="">
 <div class="header__container">
     <header>
-        <div class="logo">
-            <a href="#">Nutrition Calculator</a>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#">Личный кабинет</a></li>
-                <li><a href="#">Настройки</a></li>
-                <li><a href="#">Дневной рацион</a></li>
-                <li><a href="#">Календарь</a></li>
-            </ul>
-        </nav>
+<!--        <div class="logo">-->
+<!--            <a href="#">Nutrition Calculator</a>-->
+<!--        </div>-->
+<!--        <nav>-->
+<!--            <ul>-->
+<!--                <li><a href="#">Личный кабинет</a></li>-->
+<!--                <li><a href="#">Настройки</a></li>-->
+<!--                <li><a href="#">Дневной рацион</a></li>-->
+<!--                <li><a href="#">Календарь</a></li>-->
+<!--            </ul>-->
+<!--        </nav>-->
         <div class="menu-toggle">
             <i class="fas fa-bars"></i>
         </div>
