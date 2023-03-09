@@ -101,6 +101,8 @@ function render() {
                 }),
             });
             const data = await response.json();
+            const span = document.querySelector('.section-addProducts__num');
+            span.textContent = data.totalCalories;
             products = data.products
             if (products) {
                 products.forEach((product) => {
@@ -126,11 +128,8 @@ function render() {
                     const ulList = document.querySelector(".added-product__list");
                     // рендерим на страницу
                     ulList.insertAdjacentHTML("beforeend", markUp);
-                    const span = document.querySelector('.section-addProducts__num');
-                    span.textContent = data.totalCalories;
                 });
             } else {
-
             }
 
         } catch (error) {
